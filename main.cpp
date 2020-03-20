@@ -1,11 +1,13 @@
+#include <QApplication>
 #include "Game.h"
 
-#include <QApplication>
+Game * game;    // global pointer
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]){
     QApplication a(argc, argv);
-    Game w;
-    w.show();
+
+    game = new Game();
+    game->show();
+
     return a.exec();
 }
